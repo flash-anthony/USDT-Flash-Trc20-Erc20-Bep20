@@ -1,0 +1,142 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: #0d0d0d;
+    color: #f2f2f2;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 10px;
+    background: #111;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0,255,255,0.2);
+}
+
+header h1 {
+    font-size: 28px;
+    color: #00eaff;
+    margin-bottom: 12px;
+}
+
+/* Section Titles */
+h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #00eaff;
+}
+
+/* Paragraphs */
+p, li {
+    font-size: 17px;
+}
+
+/* Links */
+a {
+    color: #00eaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #00b8cc;
+}
+
+/* Sections */
+section {
+    background: #111;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,255,255,0.15);
+}
+
+/* List styling */
+ul {
+    margin-left: 20px;
+}
+li {
+    margin-bottom: 8px;
+}
+
+/* Screenshot Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #00eaff;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    border-color: #00b8cc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0,255,255,0.2);
+}
+
+footer h3 {
+    color: #00eaff;
+    margin-bottom: 10px;
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+/* Code box */
+code {
+    display: block;
+    background: #222;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 4px solid #00eaff;
+    color: #e6e6e6;
+    border-radius: 5px;
+    font-size: 14px;
+    overflow-x: auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+}
+/* Fade-in animation */
+section, header, footer {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-in-out;
+}
+
+section.show, header.show, footer.show {
+    opacity: 1;
+    transform: translateY(0);
+}
